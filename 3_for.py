@@ -19,9 +19,10 @@ def main():
     list_dics = [
         {'school_class': '4a', 'scores': [3, 4, 4, 5, 2]},
         {'school_class': '7b', 'scores': [5, 4, 3, 5, 2]},
-        {'school_class': '11z', 'scores': [4, 4, 4, 4, 4]},
-        {'school_class': '1c', 'scores': [3, 4, 4, 5, 3]}
+        {'school_class': '11z', 'scores': [4, 4, 2, 4, 4]},
+        {'school_class': '1c', 'scores': [3, 4, 2, 5, 3]}
     ]
+
 
     list_scores = []
     for i in list_dics:

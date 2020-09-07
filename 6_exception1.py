@@ -13,16 +13,14 @@ user_dict = {'How r u?': 'I\'m fine, thx', 'Whatcha doing?': 'Nothing'}
 
 
 def ask_user():
-    """
-    Замените pass на ваш код
-    """
-    try:
-        q = input("Your question:")
-        while q in user_dict:
+    q = input("Your question:")
+    while q in user_dict:
+        try:
             print(user_dict[q])
             q = input("Another question:")
-    except KeyboardInterrupt:
-        print("\nПока!")
+        except KeyboardInterrupt:
+            print("\nПока!")
+            break
 
 
 if __name__ == "__main__":
