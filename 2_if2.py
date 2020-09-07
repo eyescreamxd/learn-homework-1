@@ -21,12 +21,12 @@ def main():
     В ней надо заменить pass на ваш код
     """
     def compare(str1, str2):
-        if type(str1) == str and type(str2) == str:
+        if type(str1) == str == type(str2):
             if str1 == str2:
                 print(1)
-            elif str1 != str2 == 'learn':
+            elif str2 == 'learn':
                 print(3)
-            elif str1 != str2 and len(str1) > len(str2):
+            elif len(str1) > len(str2):
                 print(2)
         else:
             print(0)
@@ -35,6 +35,7 @@ def main():
     compare('asd', 1)
     compare('asd', 'asd')
     compare('asdasdasd', 'asd')
+    compare('asd', 'asdasdasd')
 
 if __name__ == "__main__":
     main()

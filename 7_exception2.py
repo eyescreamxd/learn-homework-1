@@ -20,7 +20,7 @@ def get_summ(num_one, num_two):
     try:
         return int(num_one) + int(num_two)
     except ValueError:
-        pass
+        return 'Nani'
 
 
 if __name__ == "__main__":
