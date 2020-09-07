@@ -13,7 +13,6 @@
 
 """
 from ephem import *
-from datetime import datetime
 import logging
 from setting import API_KEY
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
@@ -36,21 +35,21 @@ PROXY = {
 def check_planet(bot, update):
     planet = str(update.message.text.split(' ')[1]).lower()
     if planet == 'mercury':
-        update.message.reply_text(constellation(Mercury(datetime.now()))[-1])
+        update.message.reply_text(constellation(Mercury(now()))[-1])
     elif planet == 'venus':
-        update.message.reply_text(constellation(Venus(datetime.now()))[-1])
-    elif planet == 'earth':
-        update.message.reply_text(constellation(Earth(datetime.now()))[-1])
+        update.message.reply_text(constellation(Venus(now()))[-1])
+    # elif planet == 'earth':
+    #     update.message.reply_text(constellation(Earth(now()))[-1])
     elif planet == 'mars':
-        update.message.reply_text(constellation(Mars(datetime.now()))[-1])
+        update.message.reply_text(constellation(Mars(now()))[-1])
     elif planet == 'jupiter':
-        update.message.reply_text(constellation(Jupiter(datetime.now()))[-1])
+        update.message.reply_text(constellation(Jupiter(now()))[-1])
     elif planet == 'saturn':
-        update.message.reply_text(constellation(Saturn(datetime.now()))[-1])
+        update.message.reply_text(constellation(Saturn(now()))[-1])
     elif planet == 'uranus':
-        update.message.reply_text(constellation(Uranus(datetime.now()))[-1])
+        update.message.reply_text(constellation(Uranus(now()))[-1])
     elif planet == 'neptune':
-        update.message.reply_text(constellation(Neptune(datetime.now()))[-1])
+        update.message.reply_text(constellation(Neptune(now()))[-1])
 
 
 def greet_user(bot, update):
