@@ -25,11 +25,9 @@ def main():
 
     list_scores = []
     for i in list_dics:
+        print(f'Средний балл по {i["school_class"]} классу:', sum(i['scores']) / len(i['scores']))
         list_scores.append(sum(i['scores']) / len(i['scores']))
     print('Средний балл по всей школе:', sum(list_scores) / len(list_scores))
-    for i in list_dics:
-        print(f'Средний балл по {i["school_class"]} классу:', sum(i['scores']) / len(i['scores']))
-
 
 if __name__ == "__main__":
     main()
