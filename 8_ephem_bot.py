@@ -12,8 +12,9 @@
   бота отвечать, в каком созвездии сегодня находится планета.
 
 """
-import logging
 
+import logging
+from setting import API_KEY
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
@@ -44,7 +45,7 @@ def talk_to_me(bot, update):
  
 
 def main():
-    mybot = Updater("КЛЮЧ, КОТОРЫЙ НАМ ВЫДАЛ BotFather", request_kwargs=PROXY)
+    mybot = Updater(API_KEY, request_kwargs=PROXY)
     
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
